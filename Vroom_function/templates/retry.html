@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>retry</title>
+    <style>
+        p {
+            color:rgb(56, 56, 99);
+            font-size: 30px;
+            font-weight: bolder;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+            margin-top:-50px
+        }
+
+    </style>
+</head>
+ 
+<body STYLE='background-color:#b1ab90'>
+    <br><br>
+    <div STYLE='padding: 80px;margin-top:30px;border: 3px; border-radius: 15px; width: 800px; height: 490px; margin:auto; 
+    background-color: rgb(245, 240, 240);'><center> 
+        <p><img class=nst_img src="{{url_for('static', filename=user_img) }} " width = "400" height = "400"></p>
+        <p> 헬멧이 감지되지 않았어요😢 다시 시도해주세요! </p>
+
+        <form align="center" action="/nst_post" method="POST" enctype="multipart/form-data">
+            <DIV style="display:flex; margin-top:55px; margin-left: 360px; font-color:rgb(56, 56, 99);">
+            <div style="width:2px; height:2px; background-color:rgb(56, 56, 99);margin:auto;margin: -50px 0 0 -80px ">
+                <label className="input-file-button" for="user_img" style = "cursor : pointer ; color:rgb(56, 56, 99); font-size:20px; 
+                    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight:bolder;  float:left; flex:1"> INSERT </label>
+                <input type="file" name="user_img" id="user_img" value="userIMgage" onchange="previewImage(this,'view_area')" style="display:none"/>
+            </div>
+           
+                <input type="submit" value="SUBMIT" style = " margin:auto; margin-top:-62px ;margin-right:300px ; border : none;
+                ; padding-top:12px; padding-bottom:12px; cursor: pointer ;  font-size:20px; 
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight:bolder;  color: rgb(56, 56, 99);"/>
+
+            </DIV>
+        </form>
+    </center></div> 
+</body>
+</html>

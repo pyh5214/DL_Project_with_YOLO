@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>check</title>
+    <style>
+        body {background-color: rgb(211, 208, 208);}
+        h1 {font-family: 'Times New Roman', Times, serif; padding: 30px;}
+        li {font-weight: bolder; list-style: none; font-size : 20px}
+        span {font-weight: lighter;}
+    </style>
+</head>
+<body>
+    <h1 align="center">Check Your Helmet</h1>
+        <div style="border: 3px solid; padding :10px; width: 30% ; height: 500px ; border-radius:2em; margin:auto; padding-top:50px; background-color:#fff ">
+                <form align="center" action="/nst_post" method="POST" enctype="multipart/form-data">
+                <div style="width: 160px; height : 160px ;  margin : auto ;  border-radius:50%; background:rgb(56, 56, 99) ; display:flex;
+                justify-content:center; margin-top:-15px; ">
+                
+                    <label className="input-file-button" for="user_img" style = "cursor : pointer ; color:rgb(56, 56, 99); font-size:20px; 
+                    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight:bolder; margin-top:65px">
+                    <img src="/static/images/helmet.png" width="150px" style="margin-top: -60px;">
+                    </label>
+                    <input type="file" name="user_img" id="user_img" value="userIMgage" onchange="previewImage(this,'view_area')" 
+                        style = "display : none"  /><br>
+                </div>
+                    <p style="margin-top:50px;"><li> 헬멧 착용<span>을 확인할게요</span></li></p>
+                    <p><li>헬멧 미착용시<span> 탑승이 불가해요</span></li></p>
+                    <p><li>정면 모습<span>을 원해요</span></li></p>
+                    <p><li><span style="font-family:'Times New Roman', Times, serif"> Safety First</span></li></p>
+                    <p><li style=" font-family:'Times New Roman', Times, serif"><span style="font-family:'Times New Roman', Times, serif">With Us,</span> Vroom</li></p>
+                    <input type="submit" value="Submit" style = " margin:auto; margin-top:30px ;border : none; background-color:rgb(56, 56, 99);
+                    width: 180px; height:100; padding-top:12px; padding-bottom:12px; border-radius:15px; cursor : pointer ;  font-size:20px; 
+                    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight:bolder;  color:#fff;"/>
+                
+            </form>
+        </div>
+    </body>
+</html>
+
